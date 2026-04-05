@@ -20,7 +20,7 @@ bool operator==(const Vector < T > &lhs, const Vector < T >  &rhs);
 }
 
 template < class T >
-bool topit::Vector < T > ::isEmpty() const noexcept
+bool topit::Vector< T >::isEmpty() const noexcept
 {
   return false;
 }
@@ -33,7 +33,7 @@ topit::Vector < T >::Vector():
 {};
 
 template <class T >
-topit::Vector < T > :: ~Vector()
+topit::Vector < T >::~Vector()
 {
   delete [] data_;
 }
