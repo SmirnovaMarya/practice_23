@@ -1,22 +1,23 @@
-#include <iostream>
-#include <iomanip>
 #include "vector-top-it.hpp"
+#include <iomanip>
+#include <iostream>
+bool testDefaultVector()
+{
+  using  namespace topit;
+  Vector < int > v;
+  return v.isEmpty();
+}
 
 int main()
 {
-  bool test1()
-  {
-    using topit::Vector;
-    Vector < int > v;
-    return v.isEmpty;
-  }
   using test_t = bool(*)();
   test_t tests[] = {
-    test1
+
+    testDefaultVector
   };
-  size_t count = sizeof(tests) / sizeof(tests_t);
+  size_t count = sizeof(tests) / sizeof(test_t);
   std::cout << std::boolalpha;
-   for(size_t i = 0 ; i < ; ++i){
+	for(size_t i = 0 ; i < count; ++i){
     std::cout << tests[i]() << ":" << i << "\n";
   }
 }
